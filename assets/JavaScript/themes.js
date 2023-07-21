@@ -1,12 +1,11 @@
 const themeOneBtn = document.getElementById('theme-1')
 const themeTwoBtn = document.getElementById('theme-2')
 const themeThreeBtn = document.getElementById('theme-3')
-let theme = 0;
 
 // theme array
 const themes = [
     { '--main-background': 'hsl(222, 26%, 31%)',
-        '--toggle-background':' hsl(223, 31%, 20%)',
+        '--toggle-background': 'hsl(223, 31%, 20%)',
         '--keypad-background': 'hsl(223, 31%, 20%)',
         '--key-toggle': 'hsl(7,93%,67%)',
         '--screen-background': 'hsl(224, 36%, 15%)',
@@ -27,7 +26,7 @@ const themes = [
     },
     {
         '--main-background': 'hsl(0, 0%, 90%)',
-        '--toggle-background':' hsl(195,2%,60%)',
+        '--toggle-background': 'hsl(195,2%,60%)',
         '--keypad-background': 'hsl(0,6%,82%)',
         '--key-toggle': 'hsl(25, 98%, 40%)',
         '--screen-background': 'hsl(0, 0%, 93%)',
@@ -72,19 +71,24 @@ const themes = [
 // handles theme 1 button click
 themeOneBtn.addEventListener('click', () =>{
     theme = 0
+    document.cookie = 'theme=0'
     setTheme()
 })
 
 // handles theme 2 button click
 themeTwoBtn.addEventListener('click', () =>{
     theme = 1
+    document.cookie = 'theme=1'
     setTheme()
+    themeTwoBtn.checked = true
 })
 
 // handles theme 3 button click
 themeThreeBtn.addEventListener('click', () =>{
     theme = 2
+    document.cookie = 'theme=2'
     setTheme()
+    themeThreeBtn.checked = true
 })
 
 // changes theme
@@ -94,6 +98,45 @@ const setTheme = () =>{
             document.documentElement.style.setProperty(key,value)
         }
     )
+            if(theme == 0 ) themeOneBtn.checked = true;
+            if(theme == 1 ) themeTwoBtn.checked = true;
+            if(theme == 2 ) themeThreeBtn.checked = true;
 }
 
+// checks for user preference in the browser
+const checkForDisplayPreference = () => {
+    let themeNum = getCookie('theme')
+    if(themeNum){
+        return themeNum 
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        themeNum  = 1
+        return themeNum 
+    } else if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        themeNum  = 2
+        return themeNum 
+    }else {
+        return 0;
+    }
+}
+
+// gets cookie value from browser
+function getCookie(cname) {
+    let name = cname + '=';
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    console.log('return 0')
+    return 0;
+  }
+
+let theme = checkForDisplayPreference()
 setTheme();
