@@ -1,84 +1,84 @@
-<!<!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description"
-            content="Welcome to our intuitive online calculator – your go-to tool for effortless number crunching. Perform basic arithmetic operations, such as addition, subtraction, multiplication, and division, with ease. Whether you need to calculate simple everyday expenses or solve quick math problems, our calculator is here to simplify your tasks. Enjoy a clutter-free interface and get instant results at your fingertips. Start crunching numbers with confidence and efficiency using our reliable and user-friendly online calculator today!" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Welcome to our intuitive online calculator – your go-to tool for effortless number crunching. Perform basic arithmetic operations, such as addition, subtraction, multiplication, and division, with ease. Whether you need to calculate simple everyday expenses or solve quick math problems, our calculator is here to simplify your tasks. Enjoy a clutter-free interface and get instant results at your fingertips. Start crunching numbers with confidence and efficiency using our reliable and user-friendly online calculator today!" />
 
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
-        <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-        <title>Frontend Mentor | Calculator app</title>
+    <title>Frontend Mentor | Calculator app</title>
 
-    <body>
-        <main class="calculator">
-            <!--  logo and theme -->
-            <div class="header">
+<body>
+    <main class="calculator">
+        <!--  logo and theme -->
+        <div class="header">
+            <div>
+                <p class="logo">calc</p>
+            </div>
+            <div class="theme-input-container">
+                <div class="theme-label">
+                    <p>Theme</p>
+                </div>
                 <div>
-                    <p class="logo">calc</p>
-                </div>
-                <div class="theme-input-container">
-                    <div class="theme-label">
-                        <p>Theme</p>
-                    </div>
-                    <div>
-                        <form id="theme-form">
-                            <div class="label-fields">
-                                <label for="theme-1">1</label>
-                                <label for="theme-2">2</label>
-                                <label for="theme-3">3</label>
-                            </div>
-                            <div class="input-fields">
-                                <input type="radio" id="theme-1" name="theme" class="theme-button" checked="checked" />
-                                <input type="radio" id="theme-2" name="theme" class="theme-button" />
-                                <input type="radio" id="theme-3" name="theme" class="theme-button" />
-                            </div>
-                        </form>
-                    </div>
+                    <form id="theme-form">
+                        <div class="label-fields">
+                            <label for="theme-1">1</label>
+                            <label for="theme-2">2</label>
+                            <label for="theme-3">3</label>
+                        </div>
+                        <div class="input-fields">
+                            <input type="radio" id="theme-1" name="theme" class="theme-button" checked="checked" />
+                            <input type="radio" id="theme-2" name="theme" class="theme-button" />
+                            <input type="radio" id="theme-3" name="theme" class="theme-button" />
+                        </div>
+                    </form>
                 </div>
             </div>
-            <!-- ./logo and theme -->
+        </div>
+        <!-- ./logo and theme -->
 
-            <!-- Calculator Display -->
-            <div class="display">
-                <span id="calculations">0</span>
-            </div>
-            <!-- ./ Calculator Display -->
+        <!-- Calculator Display -->
+        <div class="display">
+            <span id="calculations">0</span>
+        </div>
+        <!-- ./ Calculator Display -->
 
-            <!-- Calculator Buttons -->
-            <div class="buttons-area">
-                <button class="btn" data-key="7">7</button>
-                <button class="btn" data-key="8">8</button>
-                <button class="btn" data-key="9">9</button>
-                <button class="btn alternitive-color-1" data-key="Backspace" data-type="function-btn">
-                    DEL
-                </button>
-                <button class="btn" data-key="4">4</button>
-                <button class="btn" data-key="5">5</button>
-                <button class="btn" data-key="6">6</button>
-                <button class="btn" data-key="+">+</button>
-                <button class="btn" data-key="1">1</button>
-                <button class="btn" data-key="2">2</button>
-                <button class="btn" data-key="3">3</button>
-                <button class="btn" data-key="-">-</button>
-                <button class="btn" data-key=".">.</button>
-                <button class="btn" data-key="0">0</button>
-                <button class="btn" data-key="/">/</button>
-                <button class="btn" data-key="x">x</button>
-                <button class="btn alternitive-color-1" data-type="function-btn" data-key="c" id="reset">
-                    RESET
-                </button>
-                <button class="btn alternitive-color-2" data-key="=" data-type="function-btn" id="equals">
-                    =
-                </button>
-            </div>
-            <!-- ./Calculator Buttons -->
-        </main>
+        <!-- Calculator Buttons -->
+        <div class="buttons-area">
+            <button class="btn" data-key="7">7</button>
+            <button class="btn" data-key="8">8</button>
+            <button class="btn" data-key="9">9</button>
+            <button class="btn alternitive-color-1" data-key="Backspace" data-type="function-btn">
+                DEL
+            </button>
+            <button class="btn" data-key="4">4</button>
+            <button class="btn" data-key="5">5</button>
+            <button class="btn" data-key="6">6</button>
+            <button class="btn" data-key="+">+</button>
+            <button class="btn" data-key="1">1</button>
+            <button class="btn" data-key="2">2</button>
+            <button class="btn" data-key="3">3</button>
+            <button class="btn" data-key="-">-</button>
+            <button class="btn" data-key=".">.</button>
+            <button class="btn" data-key="0">0</button>
+            <button class="btn" data-key="/">/</button>
+            <button class="btn" data-key="x">x</button>
+            <button class="btn alternitive-color-1" data-type="function-btn" data-key="c" id="reset">
+                RESET
+            </button>
+            <button class="btn alternitive-color-2" data-key="=" data-type="function-btn" id="equals">
+                =
+            </button>
+        </div>
+        <!-- ./Calculator Buttons -->
+    </main>
 
-        <script src="assets/JavaScript/calculator.js"></script>
-        <script src="assets/JavaScript/themes.js"></script>
-    </body>
+    <script src="assets/JavaScript/calculator.js"></script>
+    <script src="assets/JavaScript/themes.js"></script>
+</body>
 
-    </html>
+</html>
