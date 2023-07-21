@@ -17,7 +17,7 @@
     --hover: hsl(0,0%,100%);
     --alt-key-background: hsl(225, 21%, 49%);
     --alt-key-shadow: hsl(224, 28%, 35%);
-    --alt-key-toggle: hsl(223, 31%, 20%);
+    --alt-key-toggle: hsl(7,93%,67%);
     --alt-key-background-two: hsl(6, 63%, 50%);
     --alt-key-shadow-two:hsl(6, 70%, 34%);
     --alt-hover-two: hsl(7,93%,67%);
@@ -98,6 +98,31 @@ body{
 .input-field{
     display: flex;
     flex-direction: column;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--toggle-background);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--alt-key-toggle);
+    display: inline-block;
+    visibility: visible;
 }
 
 .display{
