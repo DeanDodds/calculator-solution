@@ -14,10 +14,11 @@
     --screen-background: hsl(224, 36%, 15%);
     --key-background: hsl(34,24%,89%);
     --key-shadow:hsl(28, 16%, 65%);
+    --key-toggle: hsl(7,93%,67%);
     --hover: hsl(0,0%,100%);
     --alt-key-background: hsl(225, 21%, 49%);
     --alt-key-shadow: hsl(224, 28%, 35%);
-    --alt-key-toggle: hsl(7,93%,67%);
+    --alt-key-toggle: hsl(6, 63%, 50%);
     --alt-key-background-two: hsl(6, 63%, 50%);
     --alt-key-shadow-two:hsl(6, 70%, 34%);
     --alt-hover-two: hsl(7,93%,67%);
@@ -120,9 +121,13 @@ input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: var(--alt-key-toggle);
+    background-color: var(--key-toggle);
     display: inline-block;
     visibility: visible;
+}
+
+input[type='radio']:checked:hover::after {
+    background-color: var(--alt-key-toggle);
 }
 
 .display{
