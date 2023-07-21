@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;;
+    font-family: 'League Spartan', sans-serif;
+}
+
+:root{
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow:hsl(28, 16%, 65%);
+    --hover: hsl(0,0%,100%);
+    --alt-key-background: hsl(225, 21%, 49%);
+    --alt-key-shadow: hsl(224, 28%, 35%);
+    --alt-key-toggle: hsl(223, 31%, 20%);
+    --alt-key-background-two: hsl(6, 63%, 50%);
+    --alt-key-shadow-two:hsl(6, 70%, 34%);
+    --alt-hover-two: hsl(7,93%,67%);
+    --alt-hover: hsl(225,50%,76%);
+    --btn-text: hsl(221, 14%, 31%);
+    --header-text: hsl(0, 0%, 100%);
+    --alt-btn-text: hsl(0, 0%, 100%);
+    --alt-btn-text-two:hsl(0, 0%, 100%);
+    --width-percentage: 90%;
+    --width-large-screen: 30%;
+    --display-max-width: 650px;
+}
+
+body{
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+
+
+.calculator{
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--width-percentage);
+    max-width: var(--display-max-width);
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: var(--header-text)
+}
+
+.theme-input-container{
+    display: flex;
+    text-transform: uppercase;
+}
+
+.theme-label{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.label-fields,
+.input-fields{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    width: 80px;
+}
+
+.input-fields{
+    background-color: var(--toggle-background);
+    border-radius: 30px;
+}
+
+
+.logo{   
+    padding: 0 10px 0 10px; 
+    font-size: 2.2rem;
+}
+
+#theme-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.display{
+    height: 120px;
+    width: var(--width-percentage);
+    max-width: var(--display-max-width);
+    background-color: var(--screen-background);
+    margin: 20px auto 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 62px;
+    color: var(--header-text);
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+#calculations{
+    padding: 20px;
+}
+
+.buttons-area{
+    width: var(--width-percentage);
+    max-width: var(--display-max-width);
+    padding: 30px 50px;
+    display: grid;
+    justify-content: center;
+    margin: 10px auto;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 15px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 65px 65px 65px 65px 65px;
+    background-color: var(--keypad-background);
+    border-radius: 10px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: var(--btn-text);
+    border: none;
+    border-radius: 10px;
+    border-bottom: solid 0.4rem  var(--key-shadow);
+    background-color: var(--key-background);
+}
+
+.btn:hover{
+    background-color: var(--hover);
+}
+
+.btn:active{
+    background-color: var(--key-background);
+}
+
+
+.alternitive-color-1{
+    background-color: var(--alt-key-background);
+    color: var(--alt-btn-text);
+    border-bottom: solid 0.4rem  var(--alt-key-shadow);
+}
+
+.alternitive-color-1:hover{
+    background-color: var(--alt-hover);
+}
+
+.alternitive-color-1:active{
+    background-color: var(--alt-key-background);
+}
+
+.alternitive-color-2{
+    background-color: var(--alt-key-background-two);
+    color: var(--alt-btn-text-two);
+    border-bottom: solid 0.4rem  var(--alt-key-shadow-two);
+}
+
+.alternitive-color-2:hover{
+    background-color: var(--alt-hover-two);
+}
+
+.alternitive-color-2:active{
+    background-color: var(--alt-key-background-two);
+}
+
+#reset{
+    grid-column: 1/3
+}
+
+#equals{
+    grid-column: 3/5;
+}
+
+.active {
+    background-color: var(--hover);
+}
+
+@media screen and (min-width: 900px) {
+    .calculator{
+        margin-top: 100px;
+    }
+
+    .buttons-area{
+        column-gap: 30px;
+        row-gap: 30px;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-rows: 65px 65px 65px 65px 65px;
+    }
+
+  }
