@@ -114,7 +114,7 @@ const checkForDisplayPreference = () => {
         themeNum  = 1
         return themeNum 
     } else if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        themeNum  = 2
+        themeNum  = 0
         return themeNum 
     }else {
         return 0;

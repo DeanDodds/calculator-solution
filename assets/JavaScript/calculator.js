@@ -28,6 +28,13 @@ calculatorBtn.forEach(btn => {
     })
 })
 
+// Prevent zoom on double like
+calculatorBtn.forEach(btn => {
+    btn.addEventListener('dblclick', function handleClick(event){
+    event.preventDefault();
+})
+})
+
 // up dates calculator display
 const updateDisplay = () => {
     if(equation == ''){
